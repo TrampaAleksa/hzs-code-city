@@ -31,6 +31,7 @@ public class CodesQueue
 	};
 
 	public string[] CodesArray { get => codesArray; set => codesArray = value; }
+	public string[] TemporaryCode { get => temporaryCode; set => temporaryCode = value; }
 
 	public CodesQueue()
 	{

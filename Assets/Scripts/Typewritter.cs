@@ -9,44 +9,36 @@ public class Typewritter : MonoBehaviour
     Text txt;
     string[] story;
 	public float typeSpeed = 0.075f;
+	public int numOfLines = 3;
+	CodesQueue codesQueue;
+
 
 
     void Awake()
     {
-		CodesQueue codesQueue= new CodesQueue();
-        txt = GetComponent<Text>();
-        //story = txt.text;
+		story = new string[30];
+		codesQueue= new CodesQueue();
 		story = codesQueue.CodesArray;
-        txt.text = "";
 
+		txt = GetComponent<Text>();
+        txt.text = "";
         // TODO: add optional delay when to start
         StartCoroutine("PlayText");
     }
 
-	void superSpeedTrigger()
-	{
-		typeSpeed = 0.002f;
-	}
 
     IEnumerator PlayText()
     {
-		int i = 0;
 		int lineNumber = 0;
 		foreach(string line in story)
 		{
-			if (lineNumber % 3 == 0)
+			if (lineNumber % numOfLines == 0)
 			{
 				txt.text = "";
 			}
 			lineNumber++;
 			foreach (char c in line)
 			{
-				i++;
-
-				if (i == 40)
-				{
-					superSpeedTrigger();
-				}
 				txt.text += c;
 				yield return new WaitForSeconds(typeSpeed);
 			}
