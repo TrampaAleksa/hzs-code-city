@@ -192,12 +192,12 @@ PrefabInstance:
     - target: {fileID: 256480957316356505, guid: e03916310d1c5434bac0e7fc77b2c6a1,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: -20
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 256480957316356505, guid: e03916310d1c5434bac0e7fc77b2c6a1,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: -20
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 256480957316356505, guid: e03916310d1c5434bac0e7fc77b2c6a1,
         type: 3}
@@ -212,12 +212,12 @@ PrefabInstance:
     - target: {fileID: 256480957316356505, guid: e03916310d1c5434bac0e7fc77b2c6a1,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 256480957316356505, guid: e03916310d1c5434bac0e7fc77b2c6a1,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 256480957316356505, guid: e03916310d1c5434bac0e7fc77b2c6a1,
         type: 3}
@@ -243,6 +243,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Color.b
       value: 0.7924528
+      objectReference: {fileID: 0}
+    - target: {fileID: 256480957316356484, guid: e03916310d1c5434bac0e7fc77b2c6a1,
+        type: 3}
+      propertyPath: panelRectTransform
+      value: 
+      objectReference: {fileID: 2032592459}
+    - target: {fileID: 206471086065110021, guid: e03916310d1c5434bac0e7fc77b2c6a1,
+        type: 3}
+      propertyPath: m_MinWidth
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 206471086065110021, guid: e03916310d1c5434bac0e7fc77b2c6a1,
+        type: 3}
+      propertyPath: m_MinHeight
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 206471086065110021, guid: e03916310d1c5434bac0e7fc77b2c6a1,
+        type: 3}
+      propertyPath: m_IgnoreLayout
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e03916310d1c5434bac0e7fc77b2c6a1, type: 3}
@@ -620,6 +640,7 @@ GameObject:
   - component: {fileID: 943133692}
   - component: {fileID: 943133691}
   - component: {fileID: 943133694}
+  - component: {fileID: 943133695}
   m_Layer: 5
   m_Name: Dropdown Area 1 (1)
   m_TagString: Untagged
@@ -716,6 +737,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42bd1fb068289084c8a4af245eb94b91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &943133695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 943133689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -405508275, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 5
+    m_Right: 5
+    m_Top: 5
+    m_Bottom: 5
+  m_ChildAlignment: 4
+  m_Spacing: 10
+  m_ChildForceExpandWidth: 1
+  m_ChildForceExpandHeight: 1
+  m_ChildControlWidth: 1
+  m_ChildControlHeight: 1
 --- !u!1 &957632159
 GameObject:
   m_ObjectHideFlags: 0
@@ -959,12 +1003,12 @@ PrefabInstance:
     - target: {fileID: 256480957316356505, guid: e03916310d1c5434bac0e7fc77b2c6a1,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: -20
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 256480957316356505, guid: e03916310d1c5434bac0e7fc77b2c6a1,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: -20
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 256480957316356505, guid: e03916310d1c5434bac0e7fc77b2c6a1,
         type: 3}
@@ -979,12 +1023,12 @@ PrefabInstance:
     - target: {fileID: 256480957316356505, guid: e03916310d1c5434bac0e7fc77b2c6a1,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 256480957316356505, guid: e03916310d1c5434bac0e7fc77b2c6a1,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 256480957316356505, guid: e03916310d1c5434bac0e7fc77b2c6a1,
         type: 3}
@@ -1022,6 +1066,21 @@ PrefabInstance:
 
         }'
       objectReference: {fileID: 0}
+    - target: {fileID: 256480957316356484, guid: e03916310d1c5434bac0e7fc77b2c6a1,
+        type: 3}
+      propertyPath: panelRectTransform
+      value: 
+      objectReference: {fileID: 568701310}
+    - target: {fileID: 206471086065110021, guid: e03916310d1c5434bac0e7fc77b2c6a1,
+        type: 3}
+      propertyPath: m_MinHeight
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 206471086065110021, guid: e03916310d1c5434bac0e7fc77b2c6a1,
+        type: 3}
+      propertyPath: m_MinWidth
+      value: -1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e03916310d1c5434bac0e7fc77b2c6a1, type: 3}
 --- !u!1 &1512947330
@@ -1037,6 +1096,7 @@ GameObject:
   - component: {fileID: 1512947333}
   - component: {fileID: 1512947332}
   - component: {fileID: 1512947335}
+  - component: {fileID: 1512947336}
   m_Layer: 5
   m_Name: Dropdown Area 1 (2)
   m_TagString: Untagged
@@ -1133,6 +1193,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42bd1fb068289084c8a4af245eb94b91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1512947336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1512947330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -405508275, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 5
+    m_Right: 5
+    m_Top: 5
+    m_Bottom: 5
+  m_ChildAlignment: 0
+  m_Spacing: 10
+  m_ChildForceExpandWidth: 1
+  m_ChildForceExpandHeight: 1
+  m_ChildControlWidth: 1
+  m_ChildControlHeight: 1
 --- !u!1 &1722435773
 GameObject:
   m_ObjectHideFlags: 0
@@ -1146,6 +1229,7 @@ GameObject:
   - component: {fileID: 1722435776}
   - component: {fileID: 1722435775}
   - component: {fileID: 1722435778}
+  - component: {fileID: 1722435779}
   m_Layer: 5
   m_Name: Dropdown Area 1
   m_TagString: Untagged
@@ -1242,6 +1326,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42bd1fb068289084c8a4af245eb94b91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1722435779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1722435773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -405508275, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 5
+    m_Right: 5
+    m_Top: 5
+    m_Bottom: 5
+  m_ChildAlignment: 4
+  m_Spacing: 10
+  m_ChildForceExpandWidth: 1
+  m_ChildForceExpandHeight: 1
+  m_ChildControlWidth: 1
+  m_ChildControlHeight: 1
 --- !u!1 &1955766261
 GameObject:
   m_ObjectHideFlags: 0
@@ -1397,12 +1504,12 @@ PrefabInstance:
     - target: {fileID: 256480957316356505, guid: e03916310d1c5434bac0e7fc77b2c6a1,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: -20
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 256480957316356505, guid: e03916310d1c5434bac0e7fc77b2c6a1,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: -20
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 256480957316356505, guid: e03916310d1c5434bac0e7fc77b2c6a1,
         type: 3}
@@ -1417,12 +1524,12 @@ PrefabInstance:
     - target: {fileID: 256480957316356505, guid: e03916310d1c5434bac0e7fc77b2c6a1,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 256480957316356505, guid: e03916310d1c5434bac0e7fc77b2c6a1,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 256480957316356505, guid: e03916310d1c5434bac0e7fc77b2c6a1,
         type: 3}
@@ -1459,6 +1566,21 @@ PrefabInstance:
         i--;
 
         }'
+      objectReference: {fileID: 0}
+    - target: {fileID: 256480957316356484, guid: e03916310d1c5434bac0e7fc77b2c6a1,
+        type: 3}
+      propertyPath: panelRectTransform
+      value: 
+      objectReference: {fileID: 294336525}
+    - target: {fileID: 206471086065110021, guid: e03916310d1c5434bac0e7fc77b2c6a1,
+        type: 3}
+      propertyPath: m_MinWidth
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 206471086065110021, guid: e03916310d1c5434bac0e7fc77b2c6a1,
+        type: 3}
+      propertyPath: m_MinHeight
+      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e03916310d1c5434bac0e7fc77b2c6a1, type: 3}
