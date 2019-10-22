@@ -5,8 +5,15 @@ using UnityEngine.EventSystems;
 
 public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
+    Transform startingParent = null;
+    Vector3 startingPosition;
+
     public void OnBeginDrag(PointerEventData eventData)
     {
+        startingPosition = this.transform.position;
+        startingParent = this.transform.parent;
+        this.transform.parent = this.transform.root;
+        GetComponent<CanvasGroup>().blocksRaycasts = false;
         Debug.Log("Begun dragging");
     }
 
@@ -20,5 +27,7 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
     public void OnEndDrag(PointerEventData eventData)
     {
         Debug.Log("Ended dragging");
+        this.transform.parent = startingParent;
+        this.transform.position = startingPosition;
     }
 }
