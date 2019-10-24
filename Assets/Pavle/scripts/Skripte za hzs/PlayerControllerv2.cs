@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class PlayerControllerv2 : MonoBehaviour
 {
     private Rigidbody2D rb;
+    public Transform player;
 
     public float speed = 2f;
     public float jumpForce = 5f;
@@ -114,14 +115,26 @@ public class PlayerControllerv2 : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "ground" )
+        if (collision.gameObject.tag == "ground" || collision.gameObject.tag=="Platform")
         {
             jumpsRemaining=extraJumps;
-          
+            if(collision.gameObject.tag == "Platform")
+            {
+                player.transform.parent = collision.gameObject.transform;
+            }
+        }
+        
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Platform")
+        {
+            player.transform.parent = null;
         }
     }
 
-   
+
 
 
 

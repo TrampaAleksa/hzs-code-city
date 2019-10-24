@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class upANDdown : MonoBehaviour
+public class horizontalPlatMove : MonoBehaviour
 {
     public Transform posA;
     public Transform posB;
@@ -32,6 +32,8 @@ public class upANDdown : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, nextPos, speed);
     }
 
-  
-
+     void OnDrawGizmos()
+    {
+        Gizmos.DrawLine(posA.position, posB.position);
+    }
 }
