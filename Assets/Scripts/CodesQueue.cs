@@ -4,25 +4,15 @@ using UnityEngine;
 
 public class CodesQueue 
 {
+    public CodeSegment[] codeSegments;
+    public CodeSegment[,] allCodeSegments;
+   
 	protected string[] codesArray = {
-			"i++",
-			"Hello World!",
-			"return 0;",
-			"i++",
-			"Hello World!",
-			"return 0;",
-			"i++",
-			"Hello World!",
-			"return 0;",
-			"i++",
-			"Hello World!",
-			"return 0;",
-			"i++",
-			"Hello World!",
-			"return 0;",
-			"i++",
-			"Hello World!",
-			"return 1;"
+			"int i=0;",
+			"for(i=0; i++; i<3){",
+			"Console.WriteLine(i);",
+			"}",
+			"Console.WriteLine(++i);",
 			};
 	protected string[] temporaryCode = {
 		"answer 1;",
@@ -35,6 +25,13 @@ public class CodesQueue
 
 	public CodesQueue()
 	{
-		
+        allCodeSegments = new CodeSegment[codeSegments.Length,3];
+        int i = 0;
+        foreach(var segment in codeSegments)
+        {
+           
+        }
 	}
+
+    
 }
