@@ -29,6 +29,8 @@ public class upANDdown : MonoBehaviour
             nextPos = posA.position;
         }
 
-        transform.position = Vector2.MoveTowards(transform.position, nextPos,speed);
+        transform.position = Vector3.MoveTowards(transform.position, nextPos,speed);
     }
+
+    
 }
