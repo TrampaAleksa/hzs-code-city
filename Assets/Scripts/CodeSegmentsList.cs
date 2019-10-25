@@ -2,51 +2,75 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
+
 
 public class CodeSegmentsList : MonoBehaviour
 {
     public CodeSegmentHolder[] allSegments;
-    CodeSegment[] codes;
+    public CodeSegment[] codes;
     private string[] initialCodes;
     public GameObject[] dropDownAreas;
-    
+
+
     public Text[] codeHolders;
     // Start is called before the first frame update
     void Start()
     {
         codes = allSegments[0].codeSegments;
+        string[] randomizedCodes;
 
         initialCodes = new string[codes.Length];
+        randomizedCodes = new string[codes.Length];
         for (int j = 0; j < codes.Length; j++)
         {
             initialCodes[j] = codes[j].getCode();
+            randomizedCodes[j] = initialCodes[j];
         }
-        RandomizeArray.randomize(codes, 3);
+        
+        RandomizeArray.randomize(randomizedCodes, randomizedCodes.Length);
+
         int i = 0;
         
       foreach(var code in codeHolders) {
-            code.text = codes[i].getCode();
+            code.text = randomizedCodes[i];
             i++;
       }
         print("call");
-        dropdownCodeSameAsInitial();
+       // DropdownCodeSameAsInitial();
     }
 
-    public bool dropdownCodeSameAsInitial()
+    public void QuizComplete()
     {
-        if (codes == null) return false;
+       if(DropdownCodeSameAsInitial())
+        {
+            Debug.Log("Congratz! Correct order");
+        }
+       else
+        {
+            Debug.Log("Shame,You failed!");
+        }
+    }
+
+    public bool DropdownCodeSameAsInitial()
+    {
+        if (codes == null)
+        {
+            Debug.Log("Error, no codes provided");
+            return false;
+        }
+
         string[] codesFromDropdown = new string[codes.Length];
-        int i = 0;
-        foreach(var dropdownArea in dropDownAreas)
+
+        for(int i=0; i<initialCodes.Length; i++)
         {
-            codesFromDropdown[i] = dropdownArea.GetComponentInChildren<Text>().text;
-            i++;
+            codesFromDropdown[i] = dropDownAreas[i].GetComponentInChildren<Text>().text;
+
+            if (initialCodes[i] != codesFromDropdown[i])
+            {
+                return false;
+            }
         }
-        for( i=0; i<initialCodes.Length; i++)
-        {
-            if (initialCodes[i] != codesFromDropdown[i]) return false;
-        }
-        print("Same");
         return true;
     }
 

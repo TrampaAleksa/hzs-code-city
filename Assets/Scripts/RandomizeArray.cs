@@ -4,7 +4,7 @@ using System;
 
 public class RandomizeArray
 {
-    public static void randomize(CodeSegment[] arr, int n)
+    public static void randomize(string[] arr, int n)
     {
         // Creating a object 
         // for Random class 
@@ -23,12 +23,12 @@ public class RandomizeArray
 
             // Swap arr[i] with the 
             // element at random index 
-            CodeSegment temp = arr[i];
+            string temp = arr[i];
             arr[i] = arr[j];
             arr[j] = temp;
         }
         // Prints the random array 
         for (int i = 0; i < n; i++)
-            Console.Write(arr[i].getCode() + " ");
+            Console.Write(arr[i] + " ");
     }
 }
