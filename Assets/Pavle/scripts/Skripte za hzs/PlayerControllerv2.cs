@@ -15,6 +15,7 @@ public class PlayerControllerv2 : MonoBehaviour
     private bool dontMove;
     private bool canJump;
 
+    private bool facingRight = true;
 
     
     public int extraJumps ;
@@ -33,14 +34,23 @@ public class PlayerControllerv2 : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log("numberOfjumps" + extraJumps);
-        Debug.Log("jumpsRemaining" + jumpsRemaining);
+       // Debug.Log("numberOfjumps" + extraJumps);
+       // Debug.Log("jumpsRemaining" + jumpsRemaining);
         HandleMoving();
        
     }
 
-    void HandleMoving()
+    void Flip()
     {
+        facingRight = !facingRight;
+        Vector3 Scaler = transform.localScale;
+        Scaler.x *= -1;
+        transform.localScale = Scaler;
+    }
+
+    void HandleMoving()
+    { 
+
         if (dontMove)
         {
             StopMoving();
@@ -83,11 +93,19 @@ public class PlayerControllerv2 : MonoBehaviour
 
     public void MoveLeft()
     {
+        if (facingRight == true)
+        {
+            Flip();
+        }
         rb.velocity = new Vector2(-speed, rb.velocity.y);
     }
 
     public void MoveRight()
     {
+        if (facingRight == false)
+        {
+            Flip();
+        }
         rb.velocity = new Vector2(speed , rb.velocity.y);
     }
 
