@@ -25,12 +25,6 @@ public class CodesQueue
 
 	public CodesQueue()
 	{
-        allCodeSegments = new CodeSegment[codeSegments.Length,3];
-        int i = 0;
-        foreach(var segment in codeSegments)
-        {
-           
-        }
 	}
 
     

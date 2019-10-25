@@ -8,12 +8,17 @@ using UnityEngine.Events;
 public class CodeSegmentsList : MonoBehaviour
 {
     public CodeSegmentHolder[] allSegments;
-    public CodeSegment[] codes;
+    private CodeSegment[] codes;
     private string[] initialCodes;
+    public Text[] codeHolders;
     public GameObject[] dropDownAreas;
 
+    public GameObject quizPanel;
+    public GameObject typewritterPanel;
 
-    public Text[] codeHolders;
+
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,18 +41,19 @@ public class CodeSegmentsList : MonoBehaviour
             code.text = randomizedCodes[i];
             i++;
       }
-        print("call");
-       // DropdownCodeSameAsInitial();
     }
 
     public void QuizComplete()
     {
        if(DropdownCodeSameAsInitial())
         {
+            quizPanel.SetActive(!quizPanel.activeSelf);
+            typewritterPanel.SetActive(!typewritterPanel.activeSelf);
             Debug.Log("Congratz! Correct order");
         }
        else
         {
+            quizPanel.SetActive(!quizPanel.activeSelf);
             Debug.Log("Shame,You failed!");
         }
     }

@@ -9,7 +9,7 @@ public class Typewritter : MonoBehaviour
     Text txt;
     string[] story;
 	public float typeSpeed = 0.075f;
-	public int numOfLines = 3;
+	public int numOfLines = 10;
 	CodesQueue codesQueue;
 
 
