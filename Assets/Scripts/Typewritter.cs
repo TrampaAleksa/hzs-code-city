@@ -10,17 +10,19 @@ public class Typewritter : MonoBehaviour
     string[] story;
 	public float typeSpeed = 0.075f;
 	public int numOfLines = 10;
-	CodesQueue codesQueue;
+	//CodesQueue codesQueue;
+    public CodeSegmentsList segments;
 
 
 
     void Awake()
     {
 		story = new string[30];
-		codesQueue= new CodesQueue();
-		story = codesQueue.CodesArray;
+        //codesQueue= new CodesQueue();
+        //story = codesQueue.CodesArray;
+        story = segments.GetInitialCode();
 
-		txt = GetComponent<Text>();
+        txt = GetComponent<Text>();
         txt.text = "";
         // TODO: add optional delay when to start
         StartCoroutine("PlayText");

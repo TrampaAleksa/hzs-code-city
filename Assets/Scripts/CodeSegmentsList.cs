@@ -80,6 +80,9 @@ public class CodeSegmentsList : MonoBehaviour
         return true;
     }
 
-
+    public string[] GetInitialCode()
+    {
+        return initialCodes;
+    }
 
 }
