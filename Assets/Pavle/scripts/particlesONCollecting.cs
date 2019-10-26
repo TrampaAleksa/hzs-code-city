@@ -19,7 +19,7 @@ public class particlesONCollecting : MonoBehaviour
             particle.GetComponent<ParticleSystem>().enableEmission = true;
             StartCoroutine(stopParticles());
         }
-    
+           
     }
 
     IEnumerator stopParticles()

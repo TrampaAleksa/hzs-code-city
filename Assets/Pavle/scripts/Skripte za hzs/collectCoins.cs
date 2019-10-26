@@ -11,6 +11,19 @@ public class collectCoins : MonoBehaviour
            // Debug.Log("i collected cpu");
             Destroy(other.gameObject);
           }
+        if (other.gameObject.CompareTag("ParticleManager"))
+        {
+            StartCoroutine(destroyParticles());
         }
+        }
+
+    IEnumerator destroyParticles()
+    {
+        yield return new WaitForSeconds(2);
+        Destroy(GameObject.FindGameObjectWithTag("ParticleManager"));
+    }
+
+
+
     }
 

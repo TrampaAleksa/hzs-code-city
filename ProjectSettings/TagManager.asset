@@ -7,6 +7,7 @@ TagManager:
   - ground
   - CPUS
   - Platform
+  - ParticleManager
   layers:
   - Default
   - TransparentFX
@@ -49,4 +50,7 @@ TagManager:
     locked: 0
   - name: exception
     uniqueID: 1085459713
+    locked: 0
+  - name: buttons
+    uniqueID: 1258394657
     locked: 0
