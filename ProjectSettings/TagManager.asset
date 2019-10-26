@@ -8,6 +8,8 @@ TagManager:
   - CPUS
   - Platform
   - ParticleManager
+  - music
+  - gridner
   layers:
   - Default
   - TransparentFX
@@ -48,9 +50,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: exception
-    uniqueID: 1085459713
-    locked: 0
   - name: buttons
     uniqueID: 1258394657
+    locked: 0
+  - name: foreground
+    uniqueID: 1864432729
+    locked: 0
+  - name: exception
+    uniqueID: 1085459713
     locked: 0

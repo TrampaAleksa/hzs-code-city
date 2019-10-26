@@ -140,13 +140,17 @@ public class PlayerControllerv2 : MonoBehaviour
             {
                 player.transform.parent = collision.gameObject.transform;
             }
+            if (collision.gameObject.tag == "grinder")
+            {
+                player.transform.parent = collision.gameObject.transform;
+            }
         }
         
     }
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Platform")
+        if (collision.gameObject.tag == "Platform" )
         {
             player.transform.parent = null;
         }
