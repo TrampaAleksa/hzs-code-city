@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.Events;
 
 
-public class CodeSegmentsList : MonoBehaviour
+public class CodeController : MonoBehaviour
 {
     public CodeSegmentHolder[] allSegments;
     private CodeSegment[] codes;
@@ -16,13 +16,12 @@ public class CodeSegmentsList : MonoBehaviour
     public GameObject quizPanel;
     public GameObject typewritterPanel;
 
+    private int segmentHolderIndex = 0;
 
-
-
-    // Start is called before the first frame update
-    void Start()
+    void OnEnable()
     {
-        codes = allSegments[0].codeSegments;
+        codes = allSegments[segmentHolderIndex].codeSegments;
+
         string[] randomizedCodes;
 
         initialCodes = new string[codes.Length];
@@ -32,15 +31,21 @@ public class CodeSegmentsList : MonoBehaviour
             initialCodes[j] = codes[j].getCode();
             randomizedCodes[j] = initialCodes[j];
         }
-        
+
         RandomizeArray.randomize(randomizedCodes, randomizedCodes.Length);
 
         int i = 0;
-        
-      foreach(var code in codeHolders) {
+
+        foreach (var code in codeHolders)
+        {
             code.text = randomizedCodes[i];
             i++;
-      }
+        }
+    }
+
+    // Start is called before the first frame update
+    void Start()
+    {
     }
 
     public void QuizComplete()
@@ -51,16 +56,18 @@ public class CodeSegmentsList : MonoBehaviour
             typewritterPanel.SetActive(!typewritterPanel.activeSelf);
             Debug.Log("Congratz! Correct order");
         }
-       else
+        else
         {
             quizPanel.SetActive(!quizPanel.activeSelf);
             Debug.Log("Shame,You failed!");
         }
+        segmentHolderIndex++;
     }
 
     public bool DropdownCodeSameAsInitial()
     {
-        if (codes == null)
+        print(quizPanel.activeSelf);
+        if (codes == null || !quizPanel.activeSelf)
         {
             Debug.Log("Error, no codes provided");
             return false;
@@ -83,6 +90,16 @@ public class CodeSegmentsList : MonoBehaviour
     public string[] GetInitialCode()
     {
         return initialCodes;
+    }
+
+    public void TriggerQuiz()
+    {
+        if (typewritterPanel.activeSelf)
+        {
+            typewritterPanel.SetActive(!typewritterPanel.activeSelf);
+            quizPanel.SetActive(!quizPanel.activeSelf);
+        }
+        print("triggered!");
     }
 
 }
