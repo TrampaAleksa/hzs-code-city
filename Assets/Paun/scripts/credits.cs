@@ -1,0 +1,17 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class credits : MonoBehaviour
+{
+    void Start()
+    {
+        Invoke("mainMenu", 20f);
+    }
+
+    void mainMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
+}
