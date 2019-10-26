@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerControllerv2 : MonoBehaviour
 {
@@ -135,7 +136,7 @@ public class PlayerControllerv2 : MonoBehaviour
     {
         if (collision.gameObject.tag == "ground" || collision.gameObject.tag=="Platform")
         {
-            jumpsRemaining=extraJumps;
+            jumpsRemaining =extraJumps;
             if(collision.gameObject.tag == "Platform")
             {
                 player.transform.parent = collision.gameObject.transform;
@@ -143,9 +144,14 @@ public class PlayerControllerv2 : MonoBehaviour
             if (collision.gameObject.tag == "grinder")
             {
                 player.transform.parent = collision.gameObject.transform;
-            }
+            } 
         }
-        
+        if (collision.gameObject.tag == "Die")
+        {
+            FindObjectOfType<endGame>().EndGame();
+            //problem,nece se resetuje scena
+        }
+
     }
 
     private void OnCollisionExit2D(Collision2D collision)

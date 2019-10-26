@@ -10,6 +10,8 @@ TagManager:
   - ParticleManager
   - music
   - gridner
+  - Die
+  - padajuca
   layers:
   - Default
   - TransparentFX
