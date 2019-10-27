@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Animations;
 
 public class PlayerControllerv2 : MonoBehaviour
 {
-    public Button rightB;
-    public Button leftB;
-
+    
     private Rigidbody2D rb;
     public Transform player;
     
@@ -32,6 +31,7 @@ public class PlayerControllerv2 : MonoBehaviour
 
      void Start()
     {
+
         jumpsRemaining = extraJumps;
         rb = GetComponent<Rigidbody2D>();
 
@@ -124,6 +124,7 @@ public class PlayerControllerv2 : MonoBehaviour
             Flip();
         }
         rb.velocity = new Vector2(speedd , rb.velocity.y);
+        
     }
 
     public void StopMoving()
