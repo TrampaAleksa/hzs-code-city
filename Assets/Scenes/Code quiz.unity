@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.574817, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -854,11 +854,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 229131323}
     m_Modifications:
-    - target: {fileID: 6542005784580796796, guid: 5e6cd6d9ea5a54c32bb150aae363758f,
-        type: 3}
-      propertyPath: m_Name
-      value: Code Puzzle Container
-      objectReference: {fileID: 0}
     - target: {fileID: 6542005784580796795, guid: 5e6cd6d9ea5a54c32bb150aae363758f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -969,6 +964,11 @@ PrefabInstance:
       propertyPath: typewritterPanel
       value: 
       objectReference: {fileID: 1551807910}
+    - target: {fileID: 6542005784580796796, guid: 5e6cd6d9ea5a54c32bb150aae363758f,
+        type: 3}
+      propertyPath: m_Name
+      value: Code Puzzle Container
+      objectReference: {fileID: 0}
     - target: {fileID: 6542005785425968489, guid: 5e6cd6d9ea5a54c32bb150aae363758f,
         type: 3}
       propertyPath: m_AnchorMin.y
