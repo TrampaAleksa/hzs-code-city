@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -167,6 +167,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 14
@@ -627,6 +629,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &2044285968
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -645,6 +649,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
@@ -828,11 +834,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 229131323}
     m_Modifications:
-    - target: {fileID: 6542005784580796796, guid: 5e6cd6d9ea5a54c32bb150aae363758f,
-        type: 3}
-      propertyPath: m_Name
-      value: Code Puzzle Container
-      objectReference: {fileID: 0}
     - target: {fileID: 6542005784580796795, guid: 5e6cd6d9ea5a54c32bb150aae363758f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -943,6 +944,11 @@ PrefabInstance:
       propertyPath: typewritterPanel
       value: 
       objectReference: {fileID: 1551807910}
+    - target: {fileID: 6542005784580796796, guid: 5e6cd6d9ea5a54c32bb150aae363758f,
+        type: 3}
+      propertyPath: m_Name
+      value: Code Puzzle Container
+      objectReference: {fileID: 0}
     - target: {fileID: 6542005785425968489, guid: 5e6cd6d9ea5a54c32bb150aae363758f,
         type: 3}
       propertyPath: m_AnchorMin.y
