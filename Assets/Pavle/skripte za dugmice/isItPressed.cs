@@ -4,17 +4,6 @@ using UnityEngine;
 
 public class isItPressed : MonoBehaviour
 {
-    public bool pressed;
+    //OnMouseDown ili OnClick
 
-     void Start()
-    {
-        pressed = false;
-    }
-
-
-    public void btnPressed()
-    {
-        pressed = true;
-       
-    }
 }
