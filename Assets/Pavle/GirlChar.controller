@@ -28,19 +28,12 @@ AnimatorController:
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
-<<<<<<< HEAD:Assets/Pavle/GirlChar.controller
 --- !u!1101 &1101493060186088332
 AnimatorStateTransition:
-=======
---- !u!1102 &1102200901376228452
-AnimatorState:
-  serializedVersion: 5
->>>>>>> 70efe3879815f24a0d0d38b1b6d50f068fe7cac0:Assets/Jana/GirlChar.controller
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD:Assets/Pavle/GirlChar.controller
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
@@ -62,35 +55,10 @@ AnimatorState:
   m_CanTransitionToSelf: 1
 --- !u!1101 &1101493913099069678
 AnimatorStateTransition:
-=======
-  m_Name: DoubleJumpAnimation
-  m_Speed: 1
-  m_CycleOffset: 0
-  m_Transitions: []
-  m_StateMachineBehaviours: []
-  m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 0
-  m_WriteDefaultValues: 1
-  m_Mirror: 0
-  m_SpeedParameterActive: 0
-  m_MirrorParameterActive: 0
-  m_CycleOffsetParameterActive: 0
-  m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 147593d8ab71a034692797c5252ebcd2, type: 2}
-  m_Tag: 
-  m_SpeedParameter: 
-  m_MirrorParameter: 
-  m_CycleOffsetParameter: 
-  m_TimeParameter: 
---- !u!1102 &1102501088824962982
-AnimatorState:
-  serializedVersion: 5
->>>>>>> 70efe3879815f24a0d0d38b1b6d50f068fe7cac0:Assets/Jana/GirlChar.controller
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD:Assets/Pavle/GirlChar.controller
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
@@ -110,27 +78,6 @@ AnimatorState:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
-=======
-  m_Name: JumpAnimation
-  m_Speed: 1
-  m_CycleOffset: 0
-  m_Transitions: []
-  m_StateMachineBehaviours: []
-  m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 0
-  m_WriteDefaultValues: 1
-  m_Mirror: 0
-  m_SpeedParameterActive: 0
-  m_MirrorParameterActive: 0
-  m_CycleOffsetParameterActive: 0
-  m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 5b7394aea582c4c4284cf8e3d8b70209, type: 2}
-  m_Tag: 
-  m_SpeedParameter: 
-  m_MirrorParameter: 
-  m_CycleOffsetParameter: 
-  m_TimeParameter: 
->>>>>>> 70efe3879815f24a0d0d38b1b6d50f068fe7cac0:Assets/Jana/GirlChar.controller
 --- !u!1102 &1102832509751722206
 AnimatorState:
   serializedVersion: 5
@@ -199,17 +146,7 @@ AnimatorStateMachine:
     m_Position: {x: 200, y: 0, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102832509751722206}
-<<<<<<< HEAD:Assets/Pavle/GirlChar.controller
     m_Position: {x: 240, y: 108, z: 0}
-=======
-    m_Position: {x: 235, y: 65, z: 0}
-  - serializedVersion: 1
-    m_State: {fileID: 1102501088824962982}
-    m_Position: {x: 270, y: 130, z: 0}
-  - serializedVersion: 1
-    m_State: {fileID: 1102200901376228452}
-    m_Position: {x: 305, y: 195, z: 0}
->>>>>>> 70efe3879815f24a0d0d38b1b6d50f068fe7cac0:Assets/Jana/GirlChar.controller
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
