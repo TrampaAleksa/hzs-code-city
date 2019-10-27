@@ -9,6 +9,7 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
     public Transform startingParent = null;
     public Transform startingPosition;
 
+
     public void Start()
     {
         startingPosition = this.transform;
@@ -28,17 +29,13 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
     {
        // Debug.Log("dragging");
 
-        transform.position = eventData.position;
+        transform.position =new Vector3(transform.position.x, eventData.position.y,transform.position.z);
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
         //Debug.Log("Ended dragging");
         GetComponent<CanvasGroup>().blocksRaycasts = true;
-        /*panelRectTransform.anchorMin = new Vector2(0, 0);
-        panelRectTransform.anchorMax = new Vector2(1, 1);
-        panelRectTransform.pivot = new Vector2(0.5f, 0.5f);*/
-        // this.transform.parent = startingParent;
-         //this.transform.position = startingPosition;
+    
     }
 }

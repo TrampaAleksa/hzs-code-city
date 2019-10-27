@@ -11,6 +11,7 @@ public class Typewritter : MonoBehaviour
 	public float typeSpeed;
 	public int numOfLines;
     public CodeController segments;
+    public PauzeGameForQuiz unpauzeGame;
 
 
 
@@ -18,8 +19,7 @@ public class Typewritter : MonoBehaviour
     {
 		story = new string[30];
         story = segments.GetInitialCode();
-
-        txt = GetComponent<Text>();
+        txt = GetComponentInChildren<Text>();
         txt.text = "";
         StartCoroutine("PlayText");
     }
@@ -37,12 +37,15 @@ public class Typewritter : MonoBehaviour
 			lineNumber++;
 			foreach (char c in line)
 			{
-				txt.text += c;
+                txt.text += c;
 				yield return new WaitForSeconds(typeSpeed);
 			}
 			txt.text += "\n";
 			yield return new WaitForSeconds(0.002f);
 		}
-      
+        yield return new WaitForSeconds(1);
+        unpauzeGame.toggleScripts();
+        gameObject.SetActive(!gameObject.activeSelf);
+        yield break;
     }
 }

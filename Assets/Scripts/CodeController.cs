@@ -94,12 +94,10 @@ public class CodeController : MonoBehaviour
 
     public void TriggerQuiz()
     {
-        if (typewritterPanel.activeSelf)
-        {
-            typewritterPanel.SetActive(!typewritterPanel.activeSelf);
+    
+            //typewritterPanel.SetActive(!typewritterPanel.activeSelf);
             quizPanel.SetActive(!quizPanel.activeSelf);
-        }
-        print("triggered!");
+        print("triggered quiz!");
     }
 
 }

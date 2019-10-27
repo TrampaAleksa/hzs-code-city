@@ -23,7 +23,6 @@ public class Battery : MonoBehaviour
     IEnumerator DrainBattery()
     {
         yield return new WaitForSeconds(1);
-        print(batteries.Length);
         if(batteryIndex < batteries.Length){
             currentBattery.sprite = batteries[batteryIndex];
             batteryIndex++;

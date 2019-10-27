@@ -12,6 +12,7 @@ TagManager:
   - gridner
   - Die
   - padajuca
+  - Quiz
   layers:
   - Default
   - TransparentFX

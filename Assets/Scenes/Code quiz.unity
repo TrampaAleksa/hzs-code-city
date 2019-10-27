@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.574817, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -167,6 +167,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 14
@@ -627,6 +629,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &2044285968
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -645,6 +649,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
@@ -787,12 +793,12 @@ PrefabInstance:
     - target: {fileID: 2684522041262715504, guid: e7ab60c807bfd684aae238797bcaef77,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 10.3
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 2684522041262715504, guid: e7ab60c807bfd684aae238797bcaef77,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -40.4
+      value: -223
       objectReference: {fileID: 0}
     - target: {fileID: 2684522041262715504, guid: e7ab60c807bfd684aae238797bcaef77,
         type: 3}
@@ -803,6 +809,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 269.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2684522041262715504, guid: e7ab60c807bfd684aae238797bcaef77,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2684522041262715504, guid: e7ab60c807bfd684aae238797bcaef77,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2684522041262715504, guid: e7ab60c807bfd684aae238797bcaef77,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2684522041262715504, guid: e7ab60c807bfd684aae238797bcaef77,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2684522041262715507, guid: e7ab60c807bfd684aae238797bcaef77,
         type: 3}
