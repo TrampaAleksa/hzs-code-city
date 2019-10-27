@@ -6,10 +6,14 @@ using UnityEngine.SceneManagement;
 
 public class PlayerControllerv2 : MonoBehaviour
 {
+    public Button rightB;
+    public Button leftB;
+
     private Rigidbody2D rb;
     public Transform player;
+    
 
-    public float speed = 2f;
+    public float speedd = 2f;
     public float jumpForce = 5f;
 
     private bool moveLeft;
@@ -22,22 +26,34 @@ public class PlayerControllerv2 : MonoBehaviour
     public int extraJumps ;
     private int jumpsRemaining; //2
 
-    
+    public Animator animator;
+    float horMove = 0f;
     
 
      void Start()
     {
         jumpsRemaining = extraJumps;
         rb = GetComponent<Rigidbody2D>();
-        dontMove = true;
+
         
+        dontMove = true;
+
+    }
+    
+
+    void TaskOnClick()
+    { 
+       Debug.Log("You have clicked the button!");  
     }
 
     private void Update()
     {
        // Debug.Log("numberOfjumps" + extraJumps);
        // Debug.Log("jumpsRemaining" + jumpsRemaining);
+
         HandleMoving();
+        
+        
        
     }
 
@@ -98,7 +114,7 @@ public class PlayerControllerv2 : MonoBehaviour
         {
             Flip();
         }
-        rb.velocity = new Vector2(-speed, rb.velocity.y);
+        rb.velocity = new Vector2(-speedd, rb.velocity.y);
     }
 
     public void MoveRight()
@@ -107,7 +123,7 @@ public class PlayerControllerv2 : MonoBehaviour
         {
             Flip();
         }
-        rb.velocity = new Vector2(speed , rb.velocity.y);
+        rb.velocity = new Vector2(speedd , rb.velocity.y);
     }
 
     public void StopMoving()
@@ -117,7 +133,7 @@ public class PlayerControllerv2 : MonoBehaviour
 
     void DetectImput()
     {
-        float x = Input.GetAxisRaw("Horizontal");
+       float  x = Input.GetAxisRaw("Horizontal");   //public flaot x gore
 
         if (x > 0)
         {
