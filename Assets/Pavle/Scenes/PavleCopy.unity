@@ -10985,6 +10985,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 899692761}
   score: 0
+  finalScore: 0
 --- !u!4 &1200774723
 Transform:
   m_ObjectHideFlags: 0
@@ -13793,7 +13794,12 @@ PrefabInstance:
     - target: {fileID: 7494138212062008735, guid: 00de21ae57ac6e147a076f88bd63192c,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7494138212062008735, guid: 00de21ae57ac6e147a076f88bd63192c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4370362573806879188, guid: 00de21ae57ac6e147a076f88bd63192c,
         type: 3}

@@ -9,7 +9,6 @@ public class PlayerControllerv2 : MonoBehaviour
 {
     public AudioSource s;
     public CharacterAnim animation;
-    //private PlayerAnimation playerAnimation;
     private Rigidbody2D rb;
     public Transform player;
 
@@ -31,8 +30,6 @@ public class PlayerControllerv2 : MonoBehaviour
 
      void Start()
     {
-        //s = GetComponent<AudioSource>();
-        //playerAnimation= GetComponent<PlayerAnimation>();
         jumpsRemaining = extraJumps;
         rb = GetComponent<Rigidbody2D>();
         dontMove = true;

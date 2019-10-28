@@ -40,7 +40,6 @@ public class CodeController : MonoBehaviour
 
     void OnEnable()
     {
-        print(randomIndexes[segmentHolderIndex]);
         codes = allSegments[randomIndexes[segmentHolderIndex]].codeSegments;
 
         string[] randomizedCodes;
