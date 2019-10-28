@@ -3,9 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+ 
 
 public class PlayerControllerv2 : MonoBehaviour
 {
+    public AudioSource s;
+
+    private PlayerAnimation playerAnimation;
     private Rigidbody2D rb;
     public Transform player;
 
@@ -27,6 +31,8 @@ public class PlayerControllerv2 : MonoBehaviour
 
      void Start()
     {
+        //s = GetComponent<AudioSource>();
+        playerAnimation= GetComponent<PlayerAnimation>();
         jumpsRemaining = extraJumps;
         rb = GetComponent<Rigidbody2D>();
         dontMove = true;
@@ -35,8 +41,7 @@ public class PlayerControllerv2 : MonoBehaviour
 
     private void Update()
     {
-       // Debug.Log("numberOfjumps" + extraJumps);
-       // Debug.Log("jumpsRemaining" + jumpsRemaining);
+     
         HandleMoving();
        
     }
@@ -84,10 +89,11 @@ public class PlayerControllerv2 : MonoBehaviour
     {
         if (jumpsRemaining >= 0)
         {
+            s.Play();
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             jumpsRemaining--;
         }
-       
+        
       
     }
         
@@ -99,6 +105,7 @@ public class PlayerControllerv2 : MonoBehaviour
             Flip();
         }
         rb.velocity = new Vector2(-speed, rb.velocity.y);
+
     }
 
     public void MoveRight()
@@ -107,7 +114,9 @@ public class PlayerControllerv2 : MonoBehaviour
         {
             Flip();
         }
+       
         rb.velocity = new Vector2(speed , rb.velocity.y);
+       
     }
 
     public void StopMoving()

@@ -30,7 +30,7 @@ public class ElevatorUp : MonoBehaviour
             nextPos = posA.position;
             speed = 0;
         }
-        speed = speed + 5;
+        speed = speed + 3;
         transform.position = Vector3.MoveTowards(transform.position, nextPos, speed*Time.deltaTime);
     }
 
