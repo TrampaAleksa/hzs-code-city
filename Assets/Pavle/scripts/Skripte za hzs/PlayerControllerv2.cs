@@ -59,12 +59,18 @@ public class PlayerControllerv2 : MonoBehaviour
 
         if (dontMove)
         {
-            animation.SetRunningAnimation(false);
+            if (gameObject.activeSelf)
+            {
+                animation.SetRunningAnimation(false);
+            }
             StopMoving();
         }
         else
         {
-           animation.SetRunningAnimation(true);
+            if (gameObject.activeSelf)
+            {
+                animation.SetRunningAnimation(true);
+            }
             if (moveLeft)
             {
                 MoveLeft();
@@ -91,8 +97,10 @@ public class PlayerControllerv2 : MonoBehaviour
     {
         if (jumpsRemaining >= 0)
         {
-            print("jump");
-            animation.TriggerJumpAnimation();
+            if (gameObject.activeSelf)
+            {
+                animation.TriggerJumpAnimation();
+            }
             s.Play();
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             jumpsRemaining--;
