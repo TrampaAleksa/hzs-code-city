@@ -11802,6 +11802,16 @@ PrefabInstance:
       propertyPath: animation
       value: 
       objectReference: {fileID: 1381449546}
+    - target: {fileID: 8646349540691356209, guid: 78e1d11e0bf430348ae3378d3e1f9e7f,
+        type: 3}
+      propertyPath: s
+      value: 
+      objectReference: {fileID: 1381449549}
+    - target: {fileID: 8646349540691356211, guid: 78e1d11e0bf430348ae3378d3e1f9e7f,
+        type: 3}
+      propertyPath: tickSource
+      value: 
+      objectReference: {fileID: 1381449549}
     - target: {fileID: 8646349539595436146, guid: 78e1d11e0bf430348ae3378d3e1f9e7f,
         type: 3}
       propertyPath: m_LocalRotation.z
@@ -11921,6 +11931,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1381449545}
+--- !u!82 &1381449549 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8646349540691356235, guid: 78e1d11e0bf430348ae3378d3e1f9e7f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1381449543}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1381449551 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8646349540691356209, guid: 78e1d11e0bf430348ae3378d3e1f9e7f,
@@ -12026,9 +12042,56 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6542005784580796792, guid: 2b3cfb61d60bd3a4498925bedaf56efb,
         type: 3}
+      propertyPath: allSegments.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6542005784580796792, guid: 2b3cfb61d60bd3a4498925bedaf56efb,
+        type: 3}
       propertyPath: typewritterPanel
       value: 
       objectReference: {fileID: 2684522040911607775}
+    - target: {fileID: 6542005784580796792, guid: 2b3cfb61d60bd3a4498925bedaf56efb,
+        type: 3}
+      propertyPath: allSegments.Array.data[4]
+      value: 
+      objectReference: {fileID: 11400000, guid: c43359160e7485842b2e22298c9a0fd8,
+        type: 2}
+    - target: {fileID: 6542005784580796792, guid: 2b3cfb61d60bd3a4498925bedaf56efb,
+        type: 3}
+      propertyPath: allSegments.Array.data[5]
+      value: 
+      objectReference: {fileID: 11400000, guid: 4792370e9f301cd459bc3c525f5d5784,
+        type: 2}
+    - target: {fileID: 6542005784580796792, guid: 2b3cfb61d60bd3a4498925bedaf56efb,
+        type: 3}
+      propertyPath: allSegments.Array.data[6]
+      value: 
+      objectReference: {fileID: 11400000, guid: 4792370e9f301cd459bc3c525f5d5784,
+        type: 2}
+    - target: {fileID: 6542005784580796792, guid: 2b3cfb61d60bd3a4498925bedaf56efb,
+        type: 3}
+      propertyPath: allSegments.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 41222aac0de90b04eaa2ad7a3170edf3,
+        type: 2}
+    - target: {fileID: 6542005784580796792, guid: 2b3cfb61d60bd3a4498925bedaf56efb,
+        type: 3}
+      propertyPath: allSegments.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: f4134506d4d7c194bb2f1544a2d7b848,
+        type: 2}
+    - target: {fileID: 6542005784580796792, guid: 2b3cfb61d60bd3a4498925bedaf56efb,
+        type: 3}
+      propertyPath: allSegments.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: c19eb732bbde096488bd5b08e675f840,
+        type: 2}
+    - target: {fileID: 6542005784580796792, guid: 2b3cfb61d60bd3a4498925bedaf56efb,
+        type: 3}
+      propertyPath: allSegments.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: 0b85890fc3734e14f8f8f17d82b22c06,
+        type: 2}
     - target: {fileID: 6542005784580796795, guid: 2b3cfb61d60bd3a4498925bedaf56efb,
         type: 3}
       propertyPath: m_LocalPosition.x

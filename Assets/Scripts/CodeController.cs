@@ -8,6 +8,7 @@ using UnityEngine.Events;
 public class CodeController : MonoBehaviour
 {
     public CodeSegmentHolder[] allSegments;
+    private int[] randomIndexes;
     private CodeSegment[] codes;
     private string[] initialCodes;
     public Text[] codeHolders;
@@ -18,9 +19,29 @@ public class CodeController : MonoBehaviour
 
     private int segmentHolderIndex = 0;
 
+    private void Awake()
+    {
+
+        SetFirstNRandomIndexes(allSegments.Length);
+    }
+
+    void SetFirstNRandomIndexes(int numberOfSegments)
+    {
+
+        randomIndexes = new int[numberOfSegments];
+        for(int i=0; i<numberOfSegments; i++)
+        {
+            randomIndexes[i] = i;
+        }
+       
+        RandomizeArray.randomize(randomIndexes, numberOfSegments);
+       
+    }
+
     void OnEnable()
     {
-        codes = allSegments[segmentHolderIndex].codeSegments;
+        print(randomIndexes[segmentHolderIndex]);
+        codes = allSegments[randomIndexes[segmentHolderIndex]].codeSegments;
 
         string[] randomizedCodes;
 
@@ -94,8 +115,6 @@ public class CodeController : MonoBehaviour
 
     public void TriggerQuiz()
     {
-    
-            //typewritterPanel.SetActive(!typewritterPanel.activeSelf);
             quizPanel.SetActive(!quizPanel.activeSelf);
         print("triggered quiz!");
     }
