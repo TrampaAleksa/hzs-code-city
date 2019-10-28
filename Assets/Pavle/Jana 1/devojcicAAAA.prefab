@@ -1314,8 +1314,8 @@ GameObject:
   - component: {fileID: 8646349540691356209}
   - component: {fileID: 8646349540691356211}
   - component: {fileID: 8646349540691356213}
-  - component: {fileID: 4153754758658207852}
   - component: {fileID: 8646349540691356235}
+  - component: {fileID: 6416759148490037158}
   m_Layer: 0
   m_Name: devojcicAAAA
   m_TagString: Player
@@ -1457,6 +1457,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   s: {fileID: 0}
+  animation: {fileID: 6416759148490037158}
   player: {fileID: 8646349540691195412}
   speed: 200
   jumpForce: 350
@@ -1569,18 +1570,6 @@ TrailRenderer:
   m_MinVertexDistance: 2
   m_Autodestruct: 0
   m_Emitting: 1
---- !u!114 &4153754758658207852
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8646349540691356212}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8356f9317c9c2ba43aec33d2933ec6cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &8646349540691356235
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1677,6 +1666,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &6416759148490037158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8646349540691356212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63c9f5ba9ef64ea499b1ae0e8f633894, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 8646349540691324032}
 --- !u!1 &8646349540691356214
 GameObject:
   m_ObjectHideFlags: 0

@@ -8,8 +8,8 @@ using UnityEngine.SceneManagement;
 public class PlayerControllerv2 : MonoBehaviour
 {
     public AudioSource s;
-
-    private PlayerAnimation playerAnimation;
+    public CharacterAnim animation;
+    //private PlayerAnimation playerAnimation;
     private Rigidbody2D rb;
     public Transform player;
 
@@ -32,7 +32,7 @@ public class PlayerControllerv2 : MonoBehaviour
      void Start()
     {
         //s = GetComponent<AudioSource>();
-        playerAnimation= GetComponent<PlayerAnimation>();
+        //playerAnimation= GetComponent<PlayerAnimation>();
         jumpsRemaining = extraJumps;
         rb = GetComponent<Rigidbody2D>();
         dontMove = true;
@@ -59,10 +59,12 @@ public class PlayerControllerv2 : MonoBehaviour
 
         if (dontMove)
         {
+            animation.SetRunningAnimation(false);
             StopMoving();
         }
         else
         {
+           animation.SetRunningAnimation(true);
             if (moveLeft)
             {
                 MoveLeft();
@@ -89,6 +91,8 @@ public class PlayerControllerv2 : MonoBehaviour
     {
         if (jumpsRemaining >= 0)
         {
+            print("jump");
+            animation.TriggerJumpAnimation();
             s.Play();
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             jumpsRemaining--;
