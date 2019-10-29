@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.574817, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3785,6 +3785,31 @@ PrefabInstance:
       propertyPath: m_Name
       value: Quiz Trigger
       objectReference: {fileID: 0}
+    - target: {fileID: 4370362573806879188, guid: 00de21ae57ac6e147a076f88bd63192c,
+        type: 3}
+      propertyPath: playerController
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4370362573806879188, guid: 00de21ae57ac6e147a076f88bd63192c,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4370362573806879188, guid: 00de21ae57ac6e147a076f88bd63192c,
+        type: 3}
+      propertyPath: battery
+      value: 
+      objectReference: {fileID: 1522305194}
+    - target: {fileID: 4370362573806879188, guid: 00de21ae57ac6e147a076f88bd63192c,
+        type: 3}
+      propertyPath: trailRenderer
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4370362573806879188, guid: 00de21ae57ac6e147a076f88bd63192c,
+        type: 3}
+      propertyPath: exceptionFollow
+      value: 
+      objectReference: {fileID: 1332623039}
     - target: {fileID: 7494138212062008733, guid: 00de21ae57ac6e147a076f88bd63192c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3870,31 +3895,6 @@ PrefabInstance:
       propertyPath: pauzeGame
       value: 
       objectReference: {fileID: 974689726}
-    - target: {fileID: 4370362573806879188, guid: 00de21ae57ac6e147a076f88bd63192c,
-        type: 3}
-      propertyPath: playerController
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 4370362573806879188, guid: 00de21ae57ac6e147a076f88bd63192c,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 4370362573806879188, guid: 00de21ae57ac6e147a076f88bd63192c,
-        type: 3}
-      propertyPath: battery
-      value: 
-      objectReference: {fileID: 1522305194}
-    - target: {fileID: 4370362573806879188, guid: 00de21ae57ac6e147a076f88bd63192c,
-        type: 3}
-      propertyPath: trailRenderer
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 4370362573806879188, guid: 00de21ae57ac6e147a076f88bd63192c,
-        type: 3}
-      propertyPath: exceptionFollow
-      value: 
-      objectReference: {fileID: 1332623039}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 00de21ae57ac6e147a076f88bd63192c, type: 3}
 --- !u!1001 &936472289
@@ -4935,7 +4935,7 @@ GameObject:
   - component: {fileID: 1332623041}
   - component: {fileID: 1332623040}
   - component: {fileID: 1332623039}
-  - component: {fileID: 1332623043}
+  - component: {fileID: 1332623042}
   m_Layer: 10
   m_Name: exception
   m_TagString: Die
@@ -4993,7 +4993,7 @@ SpriteRenderer:
   m_SortingLayerID: 1085459713
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 31de5c71a1a68924fb790084117ee74d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 05e18cf74b3300b4aa68e7a817cbab6d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -5013,13 +5013,13 @@ Transform:
   m_GameObject: {fileID: 1332623038}
   m_LocalRotation: {x: -0, y: -0.0035040672, z: 0, w: 0.99999386}
   m_LocalPosition: {x: -2396, y: 895, z: -11}
-  m_LocalScale: {x: 60.338192, y: 60.338192, z: 60.338192}
+  m_LocalScale: {x: 6, y: 6, z: 5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: -0.402, z: 0}
---- !u!61 &1332623043
-BoxCollider2D:
+--- !u!58 &1332623042
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -5031,19 +5031,9 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.11738944, y: 0.0880419}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 11.82, y: 11.82}
-    newSize: {x: 11.82, y: 11.82}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 5.7743134, y: 1.4308155}
-  m_EdgeRadius: 0
+  m_Radius: 19.8
 --- !u!1 &1338469322 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 58222268537409210, guid: 0e178675798545e4db177e6e0d74fdea,
@@ -5939,6 +5929,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Quiz Trigger (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4370362573806879188, guid: 00de21ae57ac6e147a076f88bd63192c,
+        type: 3}
+      propertyPath: exceptionFollow
+      value: 
+      objectReference: {fileID: 1332623039}
+    - target: {fileID: 4370362573806879188, guid: 00de21ae57ac6e147a076f88bd63192c,
+        type: 3}
+      propertyPath: battery
+      value: 
+      objectReference: {fileID: 1522305194}
     - target: {fileID: 7494138212062008733, guid: 00de21ae57ac6e147a076f88bd63192c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6004,16 +6004,6 @@ PrefabInstance:
       propertyPath: pauzeGame
       value: 
       objectReference: {fileID: 123223019}
-    - target: {fileID: 4370362573806879188, guid: 00de21ae57ac6e147a076f88bd63192c,
-        type: 3}
-      propertyPath: exceptionFollow
-      value: 
-      objectReference: {fileID: 1332623039}
-    - target: {fileID: 4370362573806879188, guid: 00de21ae57ac6e147a076f88bd63192c,
-        type: 3}
-      propertyPath: battery
-      value: 
-      objectReference: {fileID: 1522305194}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 00de21ae57ac6e147a076f88bd63192c, type: 3}
 --- !u!1 &1519318397
@@ -6131,6 +6121,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Quiz Trigger (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4370362573806879188, guid: 00de21ae57ac6e147a076f88bd63192c,
+        type: 3}
+      propertyPath: exceptionFollow
+      value: 
+      objectReference: {fileID: 1332623039}
+    - target: {fileID: 4370362573806879188, guid: 00de21ae57ac6e147a076f88bd63192c,
+        type: 3}
+      propertyPath: battery
+      value: 
+      objectReference: {fileID: 1522305194}
     - target: {fileID: 7494138212062008733, guid: 00de21ae57ac6e147a076f88bd63192c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6196,16 +6196,6 @@ PrefabInstance:
       propertyPath: quizController
       value: 
       objectReference: {fileID: 1674783672}
-    - target: {fileID: 4370362573806879188, guid: 00de21ae57ac6e147a076f88bd63192c,
-        type: 3}
-      propertyPath: exceptionFollow
-      value: 
-      objectReference: {fileID: 1332623039}
-    - target: {fileID: 4370362573806879188, guid: 00de21ae57ac6e147a076f88bd63192c,
-        type: 3}
-      propertyPath: battery
-      value: 
-      objectReference: {fileID: 1522305194}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 00de21ae57ac6e147a076f88bd63192c, type: 3}
 --- !u!1 &1586651719
