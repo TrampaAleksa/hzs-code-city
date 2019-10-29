@@ -13,14 +13,14 @@ public class endGame : MonoBehaviour
         if (gameHasEnded == false)
         {
             gameHasEnded = true;
-            Restart();
+            GameOver();
         }
 
     }
 
-    void Restart()
+    void GameOver()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene("unosPodataka");
     }
 
 }
