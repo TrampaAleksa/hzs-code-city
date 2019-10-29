@@ -16,6 +16,11 @@ public class mainMenu : MonoBehaviour
     public void Exit() {
         Application.Quit();
     }
+
+    public void HighScore()
+    {
+        SceneManager.LoadScene(5);
+    }
 	public void hzsSite()
 	{
 		Application.OpenURL("http://hzs.fonis.rs/");
