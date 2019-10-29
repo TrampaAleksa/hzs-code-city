@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2684522040511166488}
   - component: {fileID: 2684522040511166490}
   - component: {fileID: 2684522040511166491}
+  - component: {fileID: 4133291009710650644}
   m_Layer: 5
   m_Name: Code Typer Container
   m_TagString: Untagged
@@ -75,6 +76,22 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+--- !u!114 &4133291009710650644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2684522040511166489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 912f334642f086645b959a648ef6ca55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  typeSpeed: 0.075
+  numOfLines: 3
+  segments: {fileID: 0}
+  unpauzeGame: {fileID: 0}
 --- !u!1 &2684522041262715505
 GameObject:
   m_ObjectHideFlags: 0
@@ -86,7 +103,6 @@ GameObject:
   - component: {fileID: 2684522041262715504}
   - component: {fileID: 2684522041262715517}
   - component: {fileID: 2684522041262715506}
-  - component: {fileID: 2684522041262715507}
   m_Layer: 5
   m_Name: Code
   m_TagString: Untagged
@@ -156,18 +172,3 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: "Assign to UI text component, it grabs the text from it at Awake() and clears
     it,\r\nthen starts to type out the text 1 character at a time."
---- !u!114 &2684522041262715507
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2684522041262715505}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 912f334642f086645b959a648ef6ca55, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  typeSpeed: 0.075
-  numOfLines: 3
-  segments: {fileID: 0}

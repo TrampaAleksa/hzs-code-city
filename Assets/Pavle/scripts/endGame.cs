@@ -20,7 +20,7 @@ public class endGame : MonoBehaviour
 
     void GameOver()
     {
-        SceneManager.LoadScene("unosPodataka");
+        SceneManager.LoadScene(0);
     }
 
 }
