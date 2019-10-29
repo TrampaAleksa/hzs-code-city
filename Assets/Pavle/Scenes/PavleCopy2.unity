@@ -18405,6 +18405,11 @@ PrefabInstance:
       propertyPath: pauze
       value: 
       objectReference: {fileID: 974689726}
+    - target: {fileID: 6542005784580796792, guid: 2b3cfb61d60bd3a4498925bedaf56efb,
+        type: 3}
+      propertyPath: scoreManager
+      value: 
+      objectReference: {fileID: 1200774722}
     - target: {fileID: 6542005784580796795, guid: 2b3cfb61d60bd3a4498925bedaf56efb,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -18523,7 +18528,7 @@ PrefabInstance:
     - target: {fileID: 6542005784375469613, guid: 2b3cfb61d60bd3a4498925bedaf56efb,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 179.995
+      value: 184.995
       objectReference: {fileID: 0}
     - target: {fileID: 6542005784375469613, guid: 2b3cfb61d60bd3a4498925bedaf56efb,
         type: 3}
@@ -18543,7 +18548,7 @@ PrefabInstance:
     - target: {fileID: 6542005785425968489, guid: 2b3cfb61d60bd3a4498925bedaf56efb,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 179.995
+      value: 184.995
       objectReference: {fileID: 0}
     - target: {fileID: 6542005785425968489, guid: 2b3cfb61d60bd3a4498925bedaf56efb,
         type: 3}
@@ -18563,7 +18568,7 @@ PrefabInstance:
     - target: {fileID: 6542005786021366612, guid: 2b3cfb61d60bd3a4498925bedaf56efb,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 179.995
+      value: 184.995
       objectReference: {fileID: 0}
     - target: {fileID: 6542005786021366612, guid: 2b3cfb61d60bd3a4498925bedaf56efb,
         type: 3}
@@ -18660,6 +18665,11 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 80
       objectReference: {fileID: 0}
+    - target: {fileID: 688168178886194589, guid: 2b3cfb61d60bd3a4498925bedaf56efb,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.024993896
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b3cfb61d60bd3a4498925bedaf56efb, type: 3}
 --- !u!1 &1200774721
@@ -18693,6 +18703,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 899692761}
   score: 0
+  quizzesSolved: 0
   finalScore: 0
 --- !u!4 &1200774723
 Transform:

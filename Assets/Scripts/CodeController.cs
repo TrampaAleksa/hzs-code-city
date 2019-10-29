@@ -9,6 +9,7 @@ public class CodeController : MonoBehaviour
 {
     public CodeSegmentHolder[] allSegments;
 	public PauzeGameForQuiz pauze;
+	public ScoreManager scoreManager;
     private int[] randomIndexes;
     private CodeSegment[] codes;
     private string[] initialCodes;
@@ -75,6 +76,8 @@ public class CodeController : MonoBehaviour
 		segmentHolderIndex++;
 		if (DropdownCodeSameAsInitial())
         {
+			scoreManager.quizzesSolved++;
+			print("quizzes solved: " + scoreManager.quizzesSolved);
             quizPanel.SetActive(!quizPanel.activeSelf);
             typewritterPanel.SetActive(!typewritterPanel.activeSelf);
             Debug.Log("Congratz! Correct order");
