@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Paun/Scenes/Main Menu.unity
     guid: 8dcbcddbdbde15f448ba6bed7339a72d
+  - enabled: 1
+    path: Assets/Final/Main Scene.unity
+    guid: d64d53b773586b0469c3c21075bbc066
   - enabled: 0
     path: Assets/__DELETED_GUID_Trash/79a63539dffc6244792aac6a11165745
     guid: 79a63539dffc6244792aac6a11165745
@@ -26,7 +29,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Paun/Scenes/highscore.unity
     guid: ddfbaa6b5f7bd4943bd784cc60d78ceb
-  - enabled: 1
-    path: Assets/Final/Main Scene.unity
-    guid: d64d53b773586b0469c3c21075bbc066
   m_configObjects: {}

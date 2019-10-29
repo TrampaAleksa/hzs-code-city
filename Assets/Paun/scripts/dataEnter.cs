@@ -8,11 +8,16 @@ using UnityEngine.SceneManagement;
 public class dataEnter : MonoBehaviour
 {
     public InputField inputfield;
+	private string score;
     public Text text;
-    void Update()
-    {
-        text.text = Random.Range(0, 100).ToString();
-    }
+
+	private void Awake()
+	{
+		score = GameObject.Find("ScoreManager").GetComponent<ScoreManager>().finalScore.ToString();
+		print(score);
+		text.text = score;
+	}
+
 
     public void insertToTheFile()
     {
@@ -22,7 +27,7 @@ public class dataEnter : MonoBehaviour
             string line = inputfield.text + "$" + text.text + ";";
             sw.Write(line);
             sw.Close();
-            SceneManager.LoadScene(4);
+            SceneManager.LoadScene(5);
         }
     }
  

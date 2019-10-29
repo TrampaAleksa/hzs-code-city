@@ -27,6 +27,6 @@ public class characterChoosing : MonoBehaviour
     public void Apply()
     {
         DontDestroyOnLoad(go);
-        SceneManager.LoadScene(5);
+        SceneManager.LoadScene(1);
     }
 }
