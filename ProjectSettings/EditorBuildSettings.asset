@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Paun/Scenes/highscore.unity
     guid: ddfbaa6b5f7bd4943bd784cc60d78ceb
+  - enabled: 1
+    path: Assets/Paun/Scenes/CharacterChoosing.unity
+    guid: ab0d9bc670012e44584fdb083e9381c1
   m_configObjects: {}
