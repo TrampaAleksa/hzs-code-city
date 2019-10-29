@@ -10,10 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8fafb1fa85e1c1343a54e6f2e0823384, type: 3}
-  m_Name: Code Segment 3.2
+  m_Name: Code Segment 5.1
   m_EditorClassIdentifier: 
   codeLines:
-  - int main(){
-  - int niz[10]={1,2,3,4,5,6,7,8,9,10};
-  - int brojElemenata=sizeof(niz)/sizeof(int);
-  orderNumber: 2
+  - int proizvodGl(int matrica[3][3],int n){
+  - int proizvod=1;
+  - for(int i = 0; i < n ; i++){
+  - for(int j = 0; j < n ; j++){
+  orderNumber: 1

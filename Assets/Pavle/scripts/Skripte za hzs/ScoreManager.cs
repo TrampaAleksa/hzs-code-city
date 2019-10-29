@@ -10,6 +10,7 @@ public class ScoreManager : MonoBehaviour
     public Text text;
     public int score;
     private int timeElapsed;
+	public int quizzesSolved;
     public float finalScore;
 
     // Start is called before the first frame update
@@ -42,7 +43,7 @@ public class ScoreManager : MonoBehaviour
     public void CalculateFinalScore()
     {
         int numberOfProcessors = score;
-        int numberOfSuccessfulQuizzes = 3;
+        int numberOfSuccessfulQuizzes = quizzesSolved;
         float timeRemaining = 120f - Time.time;
 
         finalScore = ((timeRemaining * 100f) * numberOfProcessors) + (numberOfSuccessfulQuizzes * 10 * 100f);

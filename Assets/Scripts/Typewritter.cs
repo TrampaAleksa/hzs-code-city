@@ -17,7 +17,6 @@ public class Typewritter : MonoBehaviour
 
     void OnEnable()
     {
-        print("i AM AWAKE");
 		story = new string[30];
         story = segments.GetInitialCode();
         txt = GetComponentInChildren<Text>();

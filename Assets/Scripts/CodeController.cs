@@ -8,6 +8,8 @@ using UnityEngine.Events;
 public class CodeController : MonoBehaviour
 {
     public CodeSegmentHolder[] allSegments;
+	public PauzeGameForQuiz pauze;
+	public ScoreManager scoreManager;
     private int[] randomIndexes;
     private CodeSegment[] codes;
     private string[] initialCodes;
@@ -41,7 +43,8 @@ public class CodeController : MonoBehaviour
     void OnEnable()
     {
         codes = allSegments[randomIndexes[segmentHolderIndex]].codeSegments;
-
+		print("time on start:" + Time.time);
+		Time.timeScale = 0;
         string[] randomizedCodes;
 
         initialCodes = new string[codes.Length];
@@ -70,8 +73,11 @@ public class CodeController : MonoBehaviour
 
     public void QuizComplete()
     {
-       if(DropdownCodeSameAsInitial())
+		segmentHolderIndex++;
+		if (DropdownCodeSameAsInitial())
         {
+			scoreManager.quizzesSolved++;
+			print("quizzes solved: " + scoreManager.quizzesSolved);
             quizPanel.SetActive(!quizPanel.activeSelf);
             typewritterPanel.SetActive(!typewritterPanel.activeSelf);
             Debug.Log("Congratz! Correct order");
@@ -79,14 +85,14 @@ public class CodeController : MonoBehaviour
         else
         {
             quizPanel.SetActive(!quizPanel.activeSelf);
-            Debug.Log("Shame,You failed!");
+			pauze.toggleScripts();
+			Debug.Log("Shame,You failed!");
         }
-        segmentHolderIndex++;
+		Time.timeScale = 1;
     }
 
     public bool DropdownCodeSameAsInitial()
     {
-        print(quizPanel.activeSelf);
         if (codes == null || !quizPanel.activeSelf)
         {
             Debug.Log("Error, no codes provided");
@@ -114,8 +120,7 @@ public class CodeController : MonoBehaviour
 
     public void TriggerQuiz()
     {
-            quizPanel.SetActive(!quizPanel.activeSelf);
-        print("triggered quiz!");
+        quizPanel.SetActive(!quizPanel.activeSelf);
     }
 
 }

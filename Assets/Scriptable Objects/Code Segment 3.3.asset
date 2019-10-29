@@ -12,5 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fafb1fa85e1c1343a54e6f2e0823384, type: 3}
   m_Name: Code Segment 3.3
   m_EditorClassIdentifier: 
-  codeLines: []
+  codeLines:
+  - int zbirElemenata=zbir(niz,brojElemenata);
+  - printf("Zbir elemenata niza je %d",zbirElemenata);
+  - return 0;}
   orderNumber: 0
