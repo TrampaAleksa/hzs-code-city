@@ -20,7 +20,7 @@ public class endGame : MonoBehaviour
 
     void GameOver()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(7);
     }
 
 }

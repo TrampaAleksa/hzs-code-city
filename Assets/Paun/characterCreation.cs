@@ -18,12 +18,12 @@ public class characterCreation : MonoBehaviour
         text = GameObject.Find("character").GetComponent<Text>().text;
         if (text == "boy")
         {
-            GameObject newObject =(GameObject) Instantiate(boyPrefab, this.transform, true);
+            GameObject newObject =(GameObject) Instantiate(boyPrefab, this.transform, false);
             AddTriggers(newObject);
           
         } else if (text == "girl")
         {
-            GameObject newObject = (GameObject) Instantiate(girlPrefab, this.transform, true);
+            GameObject newObject = (GameObject) Instantiate(girlPrefab, this.transform, false);
             AddTriggers(newObject);
         }
     }

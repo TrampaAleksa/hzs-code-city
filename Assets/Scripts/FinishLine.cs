@@ -15,7 +15,7 @@ public class FinishLine : MonoBehaviour
     public void FinishGame()
     {
         scoreManager.CalculateFinalScore();
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(8);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
