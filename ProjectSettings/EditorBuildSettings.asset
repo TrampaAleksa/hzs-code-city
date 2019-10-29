@@ -12,18 +12,18 @@ EditorBuildSettings:
     path: Assets/Paun/Scenes/Main Menu.unity
     guid: 8dcbcddbdbde15f448ba6bed7339a72d
   - enabled: 1
+    path: Assets/Final/Main Scene.unity
+    guid: 79a63539dffc6244792aac6a11165745
+  - enabled: 1
     path: Assets/Paun/Scenes/Settings.unity
     guid: a75ba5a06fcea00499dacde9ad251fa2
   - enabled: 1
     path: Assets/Paun/Scenes/Credits.unity
     guid: a7e354b2f48036947bbe452cc54e46bd
-  - enabled: 0
-    path: Assets/Pavle/Scenes/PavleScene.unity
-    guid: 0c24db47c08215040811f48fdbccb2a4
-  - enabled: 0
+  - enabled: 1
     path: Assets/Paun/Scenes/dataEnter.unity
     guid: 3347e27ded5fbcc4796b46de17e02fcd
-  - enabled: 0
+  - enabled: 1
     path: Assets/Paun/Scenes/highscore.unity
     guid: ddfbaa6b5f7bd4943bd784cc60d78ceb
   m_configObjects: {}
