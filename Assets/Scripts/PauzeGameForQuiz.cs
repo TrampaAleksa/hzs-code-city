@@ -8,12 +8,16 @@ public class PauzeGameForQuiz : MonoBehaviour
     public PlayerControllerv2 playerController;
     public TrailRenderer trailRenderer;
     public Battery battery;
-    public GameObject player;
+	private GameObject player;
 
-
-    public void toggleScripts()
+	private void Start()
+	{
+		player  = GameObject.FindGameObjectWithTag("Player");
+		playerController = player.GetComponent<PlayerControllerv2>();
+		trailRenderer = player.GetComponent<TrailRenderer>();
+	}
+	public void toggleScripts()
     {
-
         player.SetActive(!player.activeSelf);
         exceptionFollow.enabled = !exceptionFollow.enabled;
         battery.enabled = !battery.enabled;
