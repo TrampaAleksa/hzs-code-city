@@ -5,29 +5,13 @@ using UnityEngine;
 public class CharacterAnim : MonoBehaviour
 {
     public Animator animator;
+	private bool firstJump;
     // Start is called before the first frame update
     void Start()
     {
-        
+		firstJump = true;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        /*if(Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow))
-        {
-            animator.SetBool("isRunning", true);
-        }
-        else
-        {
-            animator.SetBool("isRunning", false);
-        }
-        if (Input.GetKey(KeyCode.Space))
-        {
-            animator.SetTrigger("jump");
-        }*/
-
-    }
 
     public void SetRunningAnimation(bool isMoving)
     {
@@ -35,6 +19,16 @@ public class CharacterAnim : MonoBehaviour
     }
     public void TriggerJumpAnimation()
     {
-        animator.SetTrigger("jump");
-    }
+		if (firstJump)
+		{
+			animator.SetTrigger("jump");
+			firstJump = false;
+		}
+		else
+		{
+			animator.SetTrigger("doubleJump");
+			firstJump = true;
+		}
+
+	}
 }
