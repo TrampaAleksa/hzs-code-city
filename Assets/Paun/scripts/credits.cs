@@ -7,7 +7,7 @@ public class credits : MonoBehaviour
 {
     void Start()
     {
-        Invoke("mainMenu", 20f);
+        Invoke("mainMenu", 25f);
     }
 
     void mainMenu()
