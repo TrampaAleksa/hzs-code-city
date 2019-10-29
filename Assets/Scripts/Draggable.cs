@@ -20,6 +20,7 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
     {
         startingPosition = this.transform;
         startingParent = this.transform.parent;
+		//this.transform.parent.SetParent(this.transform.root, false);
         this.transform.parent = this.transform.root;
         GetComponent<CanvasGroup>().blocksRaycasts = false;
         //Debug.Log("Begun dragging");

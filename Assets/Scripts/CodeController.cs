@@ -90,7 +90,6 @@ public class CodeController : MonoBehaviour
 
     public bool DropdownCodeSameAsInitial()
     {
-        print(quizPanel.activeSelf);
         if (codes == null || !quizPanel.activeSelf)
         {
             Debug.Log("Error, no codes provided");
