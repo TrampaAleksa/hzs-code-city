@@ -7,16 +7,26 @@ using UnityEngine.SceneManagement;
 public class ScoreManager : MonoBehaviour
 {
     public static ScoreManager instance;
-    public Text text;
+
+    private Text text;
+    
+
     public int score;
+
     private int timeElapsed;
 	public int quizzesSolved;
     public float finalScore;
 
+     void Awake()
+    {
+        text = GameObject.Find("Score").GetComponentInChildren<Text>();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        DontDestroyOnLoad(gameObject);
+       
+         DontDestroyOnLoad(gameObject);
        // SceneManager.LoadScene(1);
         if (instance == null)
         {

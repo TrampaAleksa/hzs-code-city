@@ -4,6 +4,14 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class mainMenu : MonoBehaviour
 {
+    private GameObject scoreManager;
+
+     void Awake()
+    {
+        scoreManager = GameObject.Find("ScoreManager");
+        Destroy(scoreManager);
+    }
+
     public void startGame() {
         SceneManager.LoadScene(6);
     }

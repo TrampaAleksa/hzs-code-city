@@ -13,6 +13,7 @@ TagManager:
   - Die
   - padajuca
   - Quiz
+  - Score
   layers:
   - Default
   - TransparentFX

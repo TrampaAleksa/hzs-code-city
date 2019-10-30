@@ -5,10 +5,12 @@ using UnityEngine;
 public class particlesONCollecting : MonoBehaviour
 {
     public Transform particle;
+    //public AudioSource cpuCollectSound;
 
     // Start is called before the first frame update
     void Start()
     {
+        //cpuCollectSound = GetComponent<AudioSource>();
         particle.GetComponent<ParticleSystem>().enableEmission = false;   
     }
 
@@ -16,6 +18,7 @@ public class particlesONCollecting : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
+           //cpuCollectSound.Play();
             particle.GetComponent<ParticleSystem>().enableEmission = true;
             StartCoroutine(stopParticles());
         }

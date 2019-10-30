@@ -22,7 +22,7 @@ public class FallingPlatform : MonoBehaviour
     {
         if (isFalling)
         {
-            downSpeed =downSpeed+0.01f;
+            downSpeed =downSpeed+0.027f;
             transform.position = Vector3.MoveTowards(transform.position,endPos.position,downSpeed);
         }
     }

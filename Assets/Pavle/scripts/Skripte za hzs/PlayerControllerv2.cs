@@ -7,7 +7,8 @@ using UnityEngine.SceneManagement;
 
 public class PlayerControllerv2 : MonoBehaviour
 {
-    public AudioSource s;
+   
+
     public CharacterAnim animation;
     private Rigidbody2D rb;
     public Transform player;
@@ -30,6 +31,7 @@ public class PlayerControllerv2 : MonoBehaviour
 
      void Start()
     {
+       
         jumpsRemaining = extraJumps;
         rb = GetComponent<Rigidbody2D>();
         dontMove = true;
@@ -98,7 +100,7 @@ public class PlayerControllerv2 : MonoBehaviour
             {
                 animation.TriggerJumpAnimation();
             }
-            s.Play();
+           
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             jumpsRemaining--;
         }
@@ -169,6 +171,7 @@ public class PlayerControllerv2 : MonoBehaviour
             FindObjectOfType<endGame>().EndGame();
             //problem,nece se resetuje scena
         }
+   
 
     }
 

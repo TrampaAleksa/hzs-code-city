@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class collectCoins : MonoBehaviour
 {
-    //public AudioSource tickSource;
+    public AudioSource tickSource;
 
      void Start()
     {
-        //tickSource = GetComponent<AudioSource>();
+        tickSource = GetComponent<AudioSource>();
     }
 
 
@@ -16,8 +16,8 @@ public class collectCoins : MonoBehaviour
     {  
        if (other.gameObject.CompareTag("CPUS"))
           {
-            // Debug.Log("i collected cpu");
-            //tickSource.Play();
+            Debug.Log("i collected cpu");
+            tickSource.Play();
             Destroy(other.gameObject);
           }
         if (other.gameObject.CompareTag("ParticleManager"))

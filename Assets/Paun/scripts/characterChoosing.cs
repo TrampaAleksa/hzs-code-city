@@ -26,7 +26,10 @@ public class characterChoosing : MonoBehaviour
     }
     public void Apply()
     {
-        DontDestroyOnLoad(go);
-        SceneManager.LoadScene(1);
+       
+        if (female.isOn != male.isOn) {
+            DontDestroyOnLoad(go);
+            SceneManager.LoadScene(1);
+    }
     }
 }
