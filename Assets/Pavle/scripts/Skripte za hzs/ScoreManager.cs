@@ -54,7 +54,7 @@ public class ScoreManager : MonoBehaviour
     {
         int numberOfProcessors = score;
         int numberOfSuccessfulQuizzes = quizzesSolved;
-        float timeRemaining = 120f - Time.time;
+        float timeRemaining = 120f - Time.timeSinceLevelLoad;
 
         finalScore = ((timeRemaining * 100f) + (numberOfProcessors*3*100f)) + (numberOfSuccessfulQuizzes * 10 * 100f);
         print("final score:" + finalScore);
