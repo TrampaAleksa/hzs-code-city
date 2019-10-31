@@ -279,7 +279,6 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 769099156}
-  - {fileID: 520252772}
   - {fileID: 456991096}
   - {fileID: 546131193}
   - {fileID: 1503327857}
@@ -482,7 +481,7 @@ RectTransform:
   - {fileID: 1392503388}
   - {fileID: 1463390927}
   m_Father: {fileID: 240098865}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -636,6 +635,7 @@ GameObject:
   - component: {fileID: 520252772}
   - component: {fileID: 520252774}
   - component: {fileID: 520252773}
+  - component: {fileID: 520252775}
   m_Layer: 5
   m_Name: girl
   m_TagString: Untagged
@@ -650,17 +650,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 520252771}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.78709173, y: 0.78709173, z: 0.78709173}
   m_Children: []
-  m_Father: {fileID: 240098865}
+  m_Father: {fileID: 769099156}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 78.5, y: 42}
-  m_SizeDelta: {x: 113.7, y: 165.6}
+  m_AnchoredPosition: {x: 58.3, y: 28}
+  m_SizeDelta: {x: 126.87, y: 176.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &520252773
 MonoBehaviour:
@@ -699,6 +699,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 520252771}
   m_CullTransparentMesh: 0
+--- !u!114 &520252775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 520252771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 240098866}
+          m_MethodName: pictureBoyClick
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!1 &546131192
 GameObject:
   m_ObjectHideFlags: 0
@@ -730,7 +761,7 @@ RectTransform:
   - {fileID: 116554430}
   - {fileID: 342937038}
   m_Father: {fileID: 240098865}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -805,6 +836,7 @@ GameObject:
   - component: {fileID: 579885964}
   - component: {fileID: 579885966}
   - component: {fileID: 579885965}
+  - component: {fileID: 579885967}
   m_Layer: 5
   m_Name: boy
   m_TagString: Untagged
@@ -828,8 +860,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -68.87052, y: 33.13657}
-  m_SizeDelta: {x: 113.7, y: 165.6}
+  m_AnchoredPosition: {x: -67.6, y: 28.19}
+  m_SizeDelta: {x: 126.87, y: 174.81}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &579885965
 MonoBehaviour:
@@ -868,6 +900,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 579885963}
   m_CullTransparentMesh: 0
+--- !u!114 &579885967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 579885963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 240098866}
+          m_MethodName: pictureGirlClick
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!1 &675896036
 GameObject:
   m_ObjectHideFlags: 0
@@ -972,6 +1035,7 @@ RectTransform:
   m_LocalScale: {x: 1.2705, y: 1.2705, z: 1.2705}
   m_Children:
   - {fileID: 579885964}
+  - {fileID: 520252772}
   m_Father: {fileID: 240098865}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1438,7 +1502,7 @@ RectTransform:
   m_Children:
   - {fileID: 518390793}
   m_Father: {fileID: 240098865}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
