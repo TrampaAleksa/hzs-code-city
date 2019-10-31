@@ -14,7 +14,6 @@ public class dataEnter : MonoBehaviour
 	private void Awake()
 	{
 		score = GameObject.Find("ScoreManager").GetComponent<ScoreManager>().finalScore.ToString();
-		print(score);
 		text.text = score;
 	}
 
@@ -23,7 +22,8 @@ public class dataEnter : MonoBehaviour
     {
         if (inputfield.text != "")
         {
-            StreamWriter sw = new StreamWriter("Assets/highscore.txt", true);
+            string path = Application.persistentDataPath + "/highscore.txt";
+            StreamWriter sw = new StreamWriter(path, true);
             string line = inputfield.text + "$" + text.text + ";";
             sw.Write(line);
             sw.Close();

@@ -45,7 +45,8 @@ public class highscore : MonoBehaviour
     public Osobe ispisi()
     {
         Osobe osobe = new Osobe();
-        StreamReader sr = new StreamReader("Assets/highscore.txt");
+        string path = Application.persistentDataPath + "/highscore.txt";
+        StreamReader sr = new StreamReader(path);
         string sve = sr.ReadToEnd();
         sr.Close();
         string[] nizovi = sve.Split(';');

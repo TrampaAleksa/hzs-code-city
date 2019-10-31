@@ -11,17 +11,17 @@ public class characterCreation : MonoBehaviour
     private GameObject girlPrefab;
 	public GameObject camera;
     public Button left, right, jump ;
-    string text;
 
     void Awake()
     {
-        text = GameObject.Find("character").GetComponent<Text>().text;
-        if (text == "boy")
+
+        Text text = GameObject.Find("character").GetComponent<Text>();
+        if (text.text == "boy")
         {
             GameObject newObject =(GameObject) Instantiate(boyPrefab, this.transform, false);
             AddTriggers(newObject);
           
-        } else if (text == "girl")
+        } else if (text.text == "girl")
         {
             GameObject newObject = (GameObject) Instantiate(girlPrefab, this.transform, false);
             AddTriggers(newObject);

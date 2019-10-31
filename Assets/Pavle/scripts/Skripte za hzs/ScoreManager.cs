@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System;
 
 public class ScoreManager : MonoBehaviour
 {
@@ -15,7 +16,7 @@ public class ScoreManager : MonoBehaviour
 
     private int timeElapsed;
 	public int quizzesSolved;
-    public float finalScore;
+    public int finalScore;
 
      void Awake()
     {
@@ -54,9 +55,9 @@ public class ScoreManager : MonoBehaviour
     {
         int numberOfProcessors = score;
         int numberOfSuccessfulQuizzes = quizzesSolved;
-        float timeRemaining = 120f - Time.timeSinceLevelLoad;
+        int timeRemaining = Convert.ToInt32(120f - Time.timeSinceLevelLoad) ;
 
-        finalScore = ((timeRemaining * 100f) + (numberOfProcessors*3*100f)) + (numberOfSuccessfulQuizzes * 10 * 100f);
+        finalScore = ((timeRemaining * 100) + (numberOfProcessors*3*100)) + (numberOfSuccessfulQuizzes * 10 * 100);
         print("final score:" + finalScore);
 
     }

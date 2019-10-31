@@ -7,19 +7,20 @@ public class BoyOrGirImage : MonoBehaviour
 {
     public Sprite boy;
     public Sprite girl;
-    private string text;
     // Start is called before the first frame update
     void Start()
     {
-        text = GameObject.Find("character").GetComponent<Text>().text;
-        if (text == "boy")
+
+        Text text = GameObject.Find("character").GetComponent<Text>();
+        if (text.text == "boy")
         {
             GetComponent<Image>().sprite = boy;
         }
-        else if (text == "girl")
+        else if (text.text == "girl")
         {
             GetComponent<Image>().sprite = girl;
         }
+        Destroy(text.gameObject);
     }
 
 }
