@@ -36,7 +36,12 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
     public void OnEndDrag(PointerEventData eventData)
     {
         //Debug.Log("Ended dragging");
+       
         GetComponent<CanvasGroup>().blocksRaycasts = true;
-    
+        if (eventData.pointerCurrentRaycast.gameObject == null || eventData.pointerCurrentRaycast.gameObject.GetComponent<Dropzone>() == null)
+        {
+            this.transform.SetParent(startingParent);
+        }
+
     }
 }
