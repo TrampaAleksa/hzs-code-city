@@ -9,33 +9,33 @@ EditorBuildSettings:
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Paun/Scenes/Main Menu.unity
+    path: Assets/Final/scenes/Main Menu.unity
     guid: 8dcbcddbdbde15f448ba6bed7339a72d
   - enabled: 1
     path: Assets/Final/Main Scene.unity
     guid: d64d53b773586b0469c3c21075bbc066
   - enabled: 0
     path: 
-    guid: 79a63539dffc6244792aac6a11165745
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Paun/Scenes/Settings.unity
+    path: Assets/Final/scenes/Settings.unity
     guid: a75ba5a06fcea00499dacde9ad251fa2
   - enabled: 1
-    path: Assets/Paun/Scenes/Credits.unity
+    path: Assets/Final/scenes/Credits.unity
     guid: a7e354b2f48036947bbe452cc54e46bd
   - enabled: 1
-    path: Assets/Paun/Scenes/dataEnter.unity
+    path: Assets/Final/scenes/dataEnter.unity
     guid: 3347e27ded5fbcc4796b46de17e02fcd
   - enabled: 1
-    path: Assets/Paun/Scenes/highscore.unity
+    path: Assets/Final/scenes/highscore.unity
     guid: ddfbaa6b5f7bd4943bd784cc60d78ceb
   - enabled: 1
-    path: Assets/Paun/Scenes/CharacterChoosing.unity
+    path: Assets/Final/scenes/CharacterChoosing.unity
     guid: ab0d9bc670012e44584fdb083e9381c1
   - enabled: 1
-    path: Assets/Paun/win-lose-scene/gameOverScene.unity
+    path: Assets/Final/scenes/gameOverScene.unity
     guid: 7fbd693eb6c8020468fd661b7238d3c3
   - enabled: 1
-    path: Assets/Paun/win-lose-scene/winningScene.unity
+    path: Assets/Final/scenes/winningScene.unity
     guid: 102a9df2bc32eef48a6b3ede4bc4d0fe
   m_configObjects: {}
